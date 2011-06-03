@@ -1,8 +1,8 @@
 #SPEC by Julien Catalano
 
-Summary:	Fork of Wormux, free (Libre) clone of Worms from Team17
+Summary:	Warmux is a free (Libre) clone of Worms from Team17 but no Wormux fork
 Name:		warmux
-Version:	11.01
+Version:	11.04.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Arcade
@@ -42,7 +42,8 @@ are future goals. So, start downloading today, and fight to become king of
 the garden! 
 
 %prep
-%setup -q -n %{name}-%{version}
+#temp fix, 11.04.1 contains only warmux-11.04 and no warmux-11.04.1
+%setup -q -n %{name}-11.04
 
 %build
 #(tpg) get rid of -Werror
@@ -82,5 +83,6 @@ rm -rf %{buildroot}
 %{_gamesbindir}/%{name}-list-games
 %{_gamesdatadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/%{name}_files.desktop
 %{_datadir}/pixmaps/%{name}_128x128.png
 %{_mandir}/man6/%{name}.*
