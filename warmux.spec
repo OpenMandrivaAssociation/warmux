@@ -1,6 +1,6 @@
 #SPEC by Julien Catalano
 
-Summary:	Warmux is a free (Libre) clone of Worms from Team17 but no Wormux fork
+Summary:	Free (Libre) clone of Worms from Team17 but no Wormux fork
 Name:		warmux
 Version:	11.04.1
 Release:	2
