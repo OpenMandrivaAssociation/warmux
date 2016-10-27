@@ -1,4 +1,6 @@
 #SPEC by Julien Catalano
+%define _disable_rebuild_configure 1
+%define _disable_lto 1
 
 Summary:	Free (Libre) clone of Worms from Team17 but no Wormux fork
 Name:		warmux
