@@ -1,0 +1,10 @@
+diff -Nru a/lib/warmux/base/i18n.cpp b/lib/warmux/base/i18n.cpp
+--- a/lib/warmux/base/i18n.cpp	2011-04-28 21:03:14.000000000 +0200
++++ b/lib/warmux/base/i18n.cpp	2018-04-22 11:40:28.338954018 +0200
+@@ -28,6 +28,7 @@
+ #include <stdlib.h>
+ 
+ #ifdef USE_FRIBIDI
++#undef HAVE_CONFIG_H
+ # include <fribidi/fribidi.h>
+ # include <cstring>
