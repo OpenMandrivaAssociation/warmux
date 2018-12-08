@@ -20,6 +20,8 @@ BuildRequires:	pkgconfig(fribidi)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libxml++-2.6)
 BuildRequires:	pkgconfig(libpng)
+BuildRequires:	autoconf-archive
+BuildRequires:	gettext-devel
 
 %description
 Almost everyone has heard of the Worms(R) series of games, developed by Team17.
