@@ -52,8 +52,8 @@ the garden!
 %patch2 -p1
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 #(tpg) get rid of -Werror
 # sed -i -e 's/-Werror//' src/Makefile.am
 
