@@ -10,6 +10,7 @@ Url:		http://www.warmux.org/
 Source0:	http://download.gna.org/warmux/%{name}-%{version}.tar.bz2
 Patch0:		warmux-zlib.patch
 Patch1:		warmux-gcc47.patch
+Patch2:		warmux-11.04-fribidi-1.0.patch
 BuildRequires:	imagemagick
 BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
@@ -48,6 +49,7 @@ the garden!
 %setup -q -n %{name}-11.04
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 export CC=gcc
