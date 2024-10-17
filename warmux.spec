@@ -6,7 +6,7 @@ Version:	11.04.1
 Release:	4
 License:	GPLv2+
 Group:		Games/Arcade
-Url:		http://www.warmux.org/
+Url:		https://www.warmux.org/
 Source0:	http://download.gna.org/warmux/%{name}-%{version}.tar.bz2
 Patch0:		warmux-zlib.patch
 Patch1:		warmux-gcc47.patch
