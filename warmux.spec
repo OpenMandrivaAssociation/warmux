@@ -12,6 +12,10 @@ Patch0:		warmux-zlib.patch
 Patch1:		warmux-gcc47.patch
 Patch2:		warmux-11.04-fribidi-1.0.patch
 Patch3:		warmux-gcc60.patch
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	imagemagick
 BuildRequires:	SDL_gfx-devel
 BuildRequires:	SDL_image-devel
