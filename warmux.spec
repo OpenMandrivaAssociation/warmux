@@ -3,7 +3,7 @@
 Summary:	Free (Libre) clone of Worms from Team17 but no Wormux fork
 Name:		warmux
 Version:	11.04.1
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Games/Arcade
 Url:		https://www.warmux.org/
