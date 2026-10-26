@@ -53,10 +53,10 @@ the garden!
 %prep
 #temp fix, 11.04.1 contains only warmux-11.04 and no warmux-11.04.1
 %setup -q -n %{name}-11.04
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p0
+%patch 0 -p1
+%patch 1 -p1
+%patch 2 -p1
+%patch 3 -p0
 
 %build
 export CC=gcc
