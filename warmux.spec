@@ -58,6 +58,9 @@ the garden!
 %patch 1 -p1
 %patch 2 -p1
 %patch 3 -p0
+# The SDL_gfx version probe never writes conftest.out here, then fails
+# the build. 2.0.26 is newer than the 2.0.22 it asks for.
+sed -i 's/AC_MSG_ERROR(Please upgrade SDL_gfx)/AC_MSG_RESULT([2.0.22 or newer assumed])/' configure.ac
 
 %build
 export CC=gcc
