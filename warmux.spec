@@ -25,6 +25,7 @@ BuildRequires:	SDL_ttf-devel
 BuildRequires:	pkgconfig(fribidi)
 BuildRequires:	pkgconfig(libcurl)
 BuildRequires:	pkgconfig(libxml-2.0)
+BuildRequires:	pkgconfig(sdl)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	autoconf-archive
 BuildRequires:	gettext-devel
@@ -68,6 +69,7 @@ export CXX=g++
 	--bindir=%{_gamesbindir} \
 	--with-datadir-name=%{_gamesdatadir}/%{name} \
 	--disable-rpath \
+	--disable-sdltest \
 	--enable-fribidi
 
 #(tpg) get rid of -Werror
