@@ -61,6 +61,23 @@ the garden!
 # The SDL_gfx version probe never writes conftest.out here, then fails
 # the build. 2.0.26 is newer than the 2.0.22 it asks for.
 sed -i 's/AC_MSG_ERROR(Please upgrade SDL_gfx)/AC_MSG_RESULT([2.0.22 or newer assumed])/' configure.ac
+# msgfmt's iconv cannot convert ISO-8859-15 (et.po) or ISO-8859-2 (hu.po).
+python - << 'PY'
+import pathlib, re
+for po in pathlib.Path("po").glob("*.po"):
+    raw = po.read_bytes()
+    head = raw[:1500].decode("latin1", "replace")
+    match = re.search(r"charset=([A-Za-z0-9_.-]+)", head)
+    if match is None:
+        continue
+    charset = match.group(1)
+    folded = charset.lower().replace("-", "")
+    if folded in ("utf8", "ascii", "charset"):
+        continue
+    text = raw.decode(charset)
+    text = text.replace("charset=" + charset, "charset=UTF-8", 1)
+    po.write_bytes(text.encode("utf-8"))
+PY
 
 %build
 export CC=gcc
