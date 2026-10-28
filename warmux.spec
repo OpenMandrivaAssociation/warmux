@@ -24,7 +24,7 @@ BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	pkgconfig(fribidi)
 BuildRequires:	pkgconfig(libcurl)
-BuildRequires:	pkgconfig(libxml++-2.6)
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	autoconf-archive
 BuildRequires:	gettext-devel
